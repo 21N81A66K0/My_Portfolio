@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0A192F;
+  --primary: #64FFDA;
+  --secondary: #8892B0;
+  --text: #CCD6F6;
+  --hover: #172A45;
+  --card: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--text)] font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold text-[var(--text)];
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-[var(--secondary)] hover:text-[var(--primary)] transition-colors
+           after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] 
+           after:bg-[var(--primary)] after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-transparent border-2 border-[var(--primary)] text-[var(--primary)]
+           hover:bg-[var(--primary)] hover:bg-opacity-10 rounded-lg transition-all duration-300
+           font-semibold relative overflow-hidden
+           before:content-[''] before:absolute before:inset-0 before:bg-[var(--primary)]
+           before:opacity-0 before:transition-opacity hover:before:opacity-5
+           hover:shadow-[0_0_15px_rgba(100,255,218,0.3)];
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-[var(--text)] mb-8
+           relative after:content-[''] after:absolute after:-bottom-4 after:left-0
+           after:w-20 after:h-1 after:bg-[var(--primary)] after:rounded-full;
+  }
+
+  .card {
+    @apply bg-[var(--hover)] backdrop-blur-sm border border-[var(--border)] rounded-xl p-6
+           hover:transform hover:-translate-y-2 transition-all duration-300
+           hover:shadow-[0_0_25px_rgba(100,255,218,0.1)]
+           hover:border-[var(--primary)] hover:border-opacity-50;
+  }
+
+  .glow-on-hover {
+    @apply hover:text-[var(--primary)] transition-colors duration-300
+           hover:shadow-[0_0_10px_rgba(100,255,218,0.3)];
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-[var(--primary)] to-[#41D1FF] bg-clip-text text-transparent;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll Reveal Animation Base Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
