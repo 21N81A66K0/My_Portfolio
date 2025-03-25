@@ -61,7 +61,7 @@ const About = () => {
                     <Code2 className="text-[var(--primary)] w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-[var(--text)] font-semibold">Software Development Engineer</h3>
+                    <h3 className="text-[var(--text)] font-semibold">Aspiring Software Development Engineer</h3>
                     <p className="text-[var(--secondary)]">Crafting scalable solutions with precision, performance, and innovation</p>
                   </div>
                 </div>
