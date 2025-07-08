@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'Enhancing Security with Real Time Animal Intruder Detection',
     description: 'This project enhances farm and property security using deep learning. A CNN processes live video feeds to detect animals and sends email alerts with images upon detection.',
-    image:"C:\\Users\\UDAYK\\OneDrive\\Desktop\\crop.png",
+    image: '/images/detected_cow.jpg',
     tech: ['Python', 'OpenCV', 'Tensor Flow', 'JavaScript'],
     github: 'https://github.com/21N81A66K0/Enhancing_Animal_Intrusion.git',
     demo: '#',
@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Crop Analysis and Farm Management System',
     description: 'A full-featured application with real-time weather and yield prediction.',
-    image: '"C:\Users\UDAYK\OneDrive\Desktop\crop.png"',
+    image: '/images/crop.png',
     tech: ['Typescript', 'Python', 'Html', 'TailwindCSS'],
     github: '#',
     demo: '#',
