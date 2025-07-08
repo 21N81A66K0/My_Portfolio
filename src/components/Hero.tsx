@@ -35,7 +35,7 @@ const Hero = () => {
             </p>
             <div className="flex gap-4 justify-center">
               <motion.a 
-                href="https://drive.google.com/file/d/1c8ugsOXmOvI5-2kdkogz7b5xHbSyWUmc/view?usp=sharing"
+                href="https://drive.google.com/file/d/1CbhTI8UyeXOkKiyr8lykvb2nDELtxEkU/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center gap-2"
